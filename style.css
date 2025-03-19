@@ -1,0 +1,310 @@
+body {
+    background-image: url('fondo1.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Efecto de paralaje */
+    background-position: center;
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+header{
+    background: linear-gradient(90deg, #333, #ff4500);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 3px solid #ff4500;
+    position: relative; /* Necesario para posicionar elementos dentro del header */
+}
+header img.esquina {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde la izquierda */
+    width: 120px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 5px; /* Bordes redondeados (opcional) */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar efecto */
+}
+header h1 {
+    color: #ff4500;
+    margin-left: 120px; /* Desplaza el texto hacia la derecha para evitar que se superponga con la imagen */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+.nav-title {
+    font-family: 'UnifrakturMaguntia',cursive;
+}
+.titulo-sencillo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Semi-negrita para resaltar un poco */
+    font-size: 2rem; /* Ajusta el tamaño según tu diseño */
+    text-align: center; /* Centrado para estética */
+    color: #ffffff; /* Blanco para que contraste bien con el fondo oscuro */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-transform: uppercase; /* Opcional: convierte el texto a mayúsculas */
+    letter-spacing: 1.5px; /* Opcional: mejora el espaciado entre letras */
+}
+.nav-item {
+    font-family: 'UnifrakturMaguntia',cursive;
+    font-size: 1.2rem; /* Ajusta el tamaño si es necesario */
+    letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: #777
+}
+nav ul li a {
+    color: #ffffff; /* Blanco como color inicial */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+nav ul li a:hover {
+    color: #ff0000; /* Rojo al pasar el cursor */
+}
+
+p, h1, h2 {
+    color: #ffffff; /* Texto en blanco */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+p:hover, h1:hover, h2:hover {
+    color: #ff0000; /* Cambia a rojo cuando el cursor pasa encima */
+}
+
+button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10 px 20px;
+    border-radius: 5 px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+p {
+    font-family: 'Monserrat', sans-serif;
+    color: #f5f5f5;
+}
+header {
+    background: linear-gradient(90deg, #2b2b2b, #7a0000);
+    color: #f5f5f5;
+}
+
+section {
+    color: #f5f5f5; /* Texto en color claro */
+    background: linear-gradient(200deg, rgba(5, 5, 5, 0.8), rgba(122, 0, 0, 0.8)); /* Degradado con opacidad */
+    border: 2px solid #7a0000; /* Bordes en rojo oscuro */
+    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px auto; /* Margen automático para centrar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra para un efecto flotante */
+    text-align: center;
+}
+/* Estilos generales del texto en los contenedores */
+  section h2 {
+    transform: scale(1); /* Tamaño inicial */
+    transition: transform 0.3s ease, color 0.3s ease; /* Suaviza el efecto */
+}
+
+  section h2:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+    color: #ff4500; /* Cambia el color del texto para destacarlo */
+}
+
+#biografia {
+background: 2px solid #7a0000;
+border-radius: 10px;
+max-width: 1500px; /* Ancho máximo del contenedor */
+padding: 20px;
+margin: 10px auto;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+text-align:center;
+overflow-wrap: break-word; /* Hace que las palabras largas se dividan automáticamente */
+line-height: 1.6; /* Mejora el espaciado entre líneas para mayor legibilidad */
+}
+
+
+#slider {
+    position: relative;
+    width: 80%; /* Ajusta el ancho según tus necesidades, 80% es un buen punto de partida */
+    max-width: 600px; /* Tamaño máximo para que no sea demasiado grande */
+    height: auto; /* Altura adaptable a las imágenes */
+    margin: 20px auto; /* Centra el slider */
+    overflow: hidden; /* Oculta el contenido fuera del área visible */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra */
+}
+
+.slider-container {
+    display: flex;
+    width: 100%; /* Elimina el cálculo innecesario si las imágenes ya están ajustadas */
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+.slide {
+    width: 100%; /* Cada diapositiva ocupa el 100% del ancho del contenedor */
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%; /* Se ajusta al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción original */
+    display: block; /* Elimina cualquier margen extra causado por los elementos inline */
+    object-fit: cover; /* Si quieres que la imagen se adapte al contenedor */
+}
+
+/* Estilos específicos para la página de tienda */
+#productos-tienda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño en cuadrícula, flexible */
+    gap: 20px; /* Espaciado entre los productos */
+    justify-content: center; /* Centra las columnas horizontalmente */
+    padding: 20px;
+    text-align: center; /* Centra el contenido dentro de cada tarjeta */
+}
+
+/* Estilos para cada producto */
+.producto-tienda {
+    background: linear-gradient(180deg, #050505, #7a0000);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-tienda:hover {
+    transform: scale(1.05); /* Efecto de acercamiento */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.8); /* Sombra más grande */
+}
+
+.producto-tienda img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    max-width: 250px; /* Tamaño máximo para evitar que crezca demasiado */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.producto-tienda h3, .producto-tienda p {
+    color: #f5f5f5; /* Mantén el contraste con el fondo oscuro */
+}
+
+.producto-tienda button {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto-tienda button:hover {
+    background-color: #f00808; /* Cambia el color al pasar el cursor */
+}
+
+button.añadir-carrito {
+    background-color: #ff4500; /* Color base */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden; /* Oculta el efecto de brillo fuera del botón */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button.añadir-carrito:hover {
+    background-color: #f53d00; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
+/* Efecto de luz brillante */
+button.añadir-carrito::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: left 0.3s ease;
+}
+
+button.añadir-carrito:hover::before {
+    left: 100%; /* Hace que el brillo se mueva a través del botón */
+}
+
+button.añadir-carrito:active {
+    transform: scale(1); /* Vuelve a la escala normal al hacer clic */
+    background-color: #cc2f00; /* Color aún más oscuro al presionar */
+}
+button.comprar {
+    background-color: #7a0000; /* Color rojo oscuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    position: relative;
+    overflow: hidden; /* Oculta el brillo fuera del botón */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+button.comprar:hover {
+    background-color: #9a0000; /* Color ligeramente más claro */
+    transform: scale(1.1); /* Zoom al pasar el cursor */
+    box-shadow: 0px 8px 15px rgba(122, 0, 0, 0.5); /* Sombra llamativa */
+}
+
+/* Efecto de brillo que cruza el botón */
+button.comprar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Fuera del área inicial */
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: left 0.5s ease;
+}
+
+button.comprar:hover::before {
+    left: 100%; /* Movimiento de brillo cruzando el botón */
+}
+
+/* Efecto al hacer clic */
+button.comprar:active {
+    transform: scale(1); /* Sin zoom */
+    background-color: #5a0000; /* Color más oscuro */
+}
+/*ACA EMPEIZA EL CODIGO DEL CARRITO FLOTANTE*/
+#carrito-flotante {
+    z-index: 1050; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+#carrito-flotante button:hover {
+    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+#carrito-flotante img {
+    pointer-events: none; /* Evita que el cursor afecte al icono */
+}
+/*ACA TERMINA EL CODIGO DE CARRTIO FLOTANTE*/
