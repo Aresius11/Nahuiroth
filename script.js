@@ -9,11 +9,12 @@ const carritoItems = document.getElementById("carrito-items");
 const total = document.getElementById("total");
 const botonVaciar = document.getElementById("vaciar-carrito");
 const botonesAgregar = document.querySelectorAll(".añadir-carrito");
+const contadorCarrito = document.getElementById("contador-carrito"); // Contador en el ícono del carrito
 let slideInterval; // ID del intervalo del slider
 
 // FUNCIONES DEL SLIDER
 function updateSliderWidth() {
-    const slideWidth = slides[0].offsetWidth;
+    const slideWidth = slides[0]?.offsetWidth || 0;
     sliderContainer.style.width = `${totalSlides * slideWidth}px`;
 }
 
@@ -31,8 +32,8 @@ function startSlider() {
 }
 
 // Pausa el slider al pasar el ratón
-sliderContainer.addEventListener("mouseenter", stopSlider);
-sliderContainer.addEventListener("mouseleave", startSlider);
+sliderContainer?.addEventListener("mouseenter", stopSlider);
+sliderContainer?.addEventListener("mouseleave", startSlider);
 
 // ALERTA DINÁMICA EN LA INTERFAZ
 function mostrarMensaje(mensaje) {
@@ -44,6 +45,11 @@ function mostrarMensaje(mensaje) {
     setTimeout(() => {
         document.body.removeChild(alerta);
     }, 3000);
+}
+
+// ACTUALIZAR CONTADOR DEL CARRITO
+function actualizarContadorCarrito() {
+    contadorCarrito.textContent = carrito.length; // Número de productos en el carrito
 }
 
 // AÑADIR AL CARRITO
@@ -59,6 +65,7 @@ botonesAgregar.forEach((boton) => {
         } else {
             carrito.push({ nombre, precio });
             actualizarCarrito();
+            actualizarContadorCarrito(); // Actualiza el contador
         }
     });
 });
@@ -88,6 +95,7 @@ function actualizarCarrito() {
 botonVaciar.addEventListener("click", () => {
     carrito.length = 0; // Vacía el carrito
     actualizarCarrito();
+    actualizarContadorCarrito(); // Actualiza el contador
 });
 
 // LOCAL STORAGE - GUARDAR Y CARGAR
@@ -105,6 +113,7 @@ function cargarCarrito() {
         carrito.length = 0; // Limpia el carrito actual
         carrito.push(...carritoGuardado); // Carga los productos
         actualizarCarrito();
+        actualizarContadorCarrito(); // Actualiza el contador
     }
 }
 
@@ -128,4 +137,19 @@ carritoFlotante.addEventListener("click", () => {
     }
 });
 
+  const audio = document.getElementById("preview");
+
+  let timeoutId = null;
+
+  audio.addEventListener("play", () => {
+    clearTimeout(timeoutId); // evita múltiples temporizadores si se reproduce más de una vez
+    timeoutId = setTimeout(() => {
+      audio.pause();
+      audio.currentTime = 0; // opcional: reinicia al principio
+    }, 15000); // 15000 milisegundos = 15 segundos
+  });
+
+  audio.addEventListener("pause", () => {
+    clearTimeout(timeoutId); // limpia el temporizador si el usuario pausa antes
+  });
 
