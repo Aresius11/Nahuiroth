@@ -10,6 +10,8 @@ const total = document.getElementById("total");
 const botonVaciar = document.getElementById("vaciar-carrito");
 const botonesAgregar = document.querySelectorAll(".añadir-carrito");
 const contadorCarrito = document.getElementById("contador-carrito"); // Contador en el ícono del carrito
+ const audio = document.getElementById("preview");
+ let timeoutId = null;
 let slideInterval; // ID del intervalo del slider
 
 // FUNCIONES DEL SLIDER
@@ -136,10 +138,6 @@ carritoFlotante.addEventListener("click", () => {
         carritoSeccion.scrollIntoView({ behavior: "smooth" }); // Desplaza suavemente hacia el carrito
     }
 });
-
-  const audio = document.getElementById("preview");
-
-  let timeoutId = null;
 
   audio.addEventListener("play", () => {
     clearTimeout(timeoutId); // evita múltiples temporizadores si se reproduce más de una vez
