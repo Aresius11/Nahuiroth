@@ -120,6 +120,7 @@ section {
     color: #ff4500; /* Cambia el color del texto para destacarlo */
 }
 
+
 #biografia {
 background: 2px solid #7a0000;
 border-radius: 10px;
@@ -213,6 +214,7 @@ line-height: 1.6; /* Mejora el espaciado entre líneas para mayor legibilidad */
     background-color: #f00808; /* Cambia el color al pasar el cursor */
 }
 
+/* Botón añadir al carrito */
 button.añadir-carrito {
     background-color: #ff4500; /* Color base */
     color: #fff;
@@ -252,6 +254,45 @@ button.añadir-carrito:active {
     transform: scale(1); /* Vuelve a la escala normal al hacer clic */
     background-color: #cc2f00; /* Color aún más oscuro al presionar */
 }
+/* Centrar el contenedor del carrito */
+#carrito {
+    display: flex;
+    flex-direction: column; /* Asegura una disposición vertical del contenido */
+    align-items: center; /* Centra horizontalmente los elementos internos */
+    justify-content: center; /* Centra verticalmente los elementos internos */
+    margin: 0 auto; /* Centra horizontalmente en el contenedor padre */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade un efecto elegante */
+    background-color: #220f0f; /* Fondo blanco para destacar */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+body {
+    justify-content: center; /* Centra horizontalmente el carrito */
+    align-items: center; /* Centra verticalmente el carrito */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes */
+}
+
+
+/* Contador del carrito */
+#carrito-flotante .contador {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 button.comprar {
     background-color: #7a0000; /* Color rojo oscuro */
     color: #fff;
