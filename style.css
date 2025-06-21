@@ -157,6 +157,7 @@ h1, h2, h3 {
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
+  background-attachment: fixed;
 }
 
 /* Asegura que el contenido no se opaque con el fondo */
