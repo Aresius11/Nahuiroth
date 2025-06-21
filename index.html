@@ -1,47 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TIENDA NAHUIROTH</title>
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUa1zA3s1rsLBJ+Ddl+L2K3e4Ibv2v9ZZ0gBpbLMtu5TbsEnrDd49K4e2jv1" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css"> <!-- Mantén tu estilo para personalización -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-QOLzMb1Tcxlv3dFptjV0CGKNK3jUHjcD6df1sMHO7F5SljIwCeVJOeTAihDJhFIg" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./style.css">
-    </head>    
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-<style>
-</style>
-<body>
-    <header>
-        <img src="logo1.jpg" alt="Logo Nahuiroth" class="esquina">
-        <h1 class="titulo-sencillo">NAHUIROTH</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link nav-title active" href="tienda.html">Tienda Nahui</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-title" href="musica.html">Música</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-title" href="eventos.html">Próximos Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-title" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-       <div id="biografia">
-    <h2 class="titulo-sencillo">BIOGRAFIA</h2>
-    <section id="biografia-nahuiroth">
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nahuiroth - Metal Ancestral</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <p>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome para íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Animate.css para animaciones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER CON LOGO Y MENÚ -->
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="logo1.jpg" alt="Logo de Nahuiroth" class="logo">
+      <h1 class="brand">Nahuiroth</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#biografia">Biografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Musica">Música</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Eventos">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contactos">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN BIOGRAFÍA CON EFECTO HOVER -->
+    <section id="biografia" class="bio-section">
+      <h2 class="section-title hover-reveal">BIOGRAFÍA</h2>
+      <div class="bio-content">
+        <!-- Aquí va el texto largo, que ocultaremos con CSS y mostraremos al hacer hover -->
+          <p>
     Nahuiroth nació en la ciudad de Puebla a mediados de 2024, como una visión del músico y compositor Ahuitz Sánchez (Ahuitz Olin). Después de su paso por diversas agrupaciones alejadas del sonido que deseaba explorar, Ahuitz decidió reclutar nuevos músicos para crear un proyecto propio, aunque en ese momento aún no tenía un nombre definido.
   </p> <br>
 
@@ -67,53 +79,73 @@
   <p>
     Nahuiroth no es solo una banda de metal, es un ritual sonoro que conecta la furia moderna con la espiritualidad ancestral.
   </p>
-</section>
-        </section>
-        <section id="slider">
-            <div class="slider-container">
-                <div class="slide">
-                    <img src="slider1.jpg" alt="Foto 1">
-                </div>
-                <div class="slide">
-                    <img src="slider2.jpg" alt="Foto 2">
-                </div>
-                <div class="slide">
-                    <img src="slider3.jpg" alt="Foto 3">
-                </div>
-                <div class="slide">
-                    <img src="slider4.jpg" alt="Foto 4">
-                </div>
-            </div>
-        </section>
-        
-       <section id="Musica">
-  <h2 class="titulo-sencillo">Escucha nuestro primer sencillo "ESPECTRO" Disponible ya en todas las plataformas musicales</h2>
-  
-  <audio id="preview" controls>
-    <source src="espectro.mp3" type="audio/mpeg">
-    Tu navegador no soporta el elemento de audio.
-  </audio>
-</section>
-
+        <!-- TODO: incluir todo el contenido como en tu versión original -->
+      </div>
     </section>
-    <section id="Eventos">
-        <h2 class="titulo-sencillo">PROXIMOS EVENTOS</h2>
-         <div style="text-align: center;">
-        <img src="evento1.jpg" alt="Evento 1" style="width: 300px; margin-right: 20px;">
-        <img src="evento2.jpg" alt="Evento 2" style="width: 300px;">
-    </div>
 
-        <P>Proximamente estaremos en tu ciudad!!</P>
-        </section>
-    <section id="Contactos" class="fondo-contactos">
-  <p>(CONTACTOS DE LA BANDA)</p>
-  <p>Escríbenos a: <a href="mailto:nahuirothb@gmail.com">nahuirothb@gmail.com</a></p>
-</section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Nahuiroth. Todos los derechos.</p>
-        </footer>
-        <script src="script.js"></script>
-        
+    <!-- SLIDER MODERNO -->
+    <section id="slider" class="slider-section">
+      <div class="carousel slide" id="carouselExample" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="slider1.jpg" class="d-block w-100" alt="Foto 1">
+          </div>
+          <div class="carousel-item">
+            <img src="slider2.jpg" class="d-block w-100" alt="Foto 2">
+          </div>
+          <div class="carousel-item">
+            <img src="slider3.jpg" class="d-block w-100" alt="Foto 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN MÚSICA -->
+    <section id="Musica" class="music-section">
+      <h2 class="section-title">Escucha un adelanto de nuestro sencillo "Espectro"</h2>
+      <div class="audio-player">
+        <audio controls>
+          <source src="espectro.mp3" type="audio/mpeg">
+          Tu navegador no soporta este audio.
+        </audio>
+      </div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section id="Eventos" class="eventos-section">
+      <h2 class="section-title">Proximos Eventos Puebla</h2>
+      <div class="eventos-galeria">
+        <img src="evento1.jpg" alt="Evento 1">
+        <img src="evento2.jpg" alt="Evento 2">
+      </div>
+      <p class="proximamente">¡Pronto en tu ciudad!</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="Contactos" class="contacto-section">
+      <p>Escríbenos a: <a href="mailto:nahuirothb@gmail.com">nahuirothb@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER PROFESIONAL CON REDES -->
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-tiktok fa-lg"></i></a>
+    </div>
+    <p>&copy; 2025 Nahuiroth. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

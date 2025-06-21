@@ -1,357 +1,224 @@
+/* ----------------------------------------------
+   FUENTES Y CONFIGURACIÓN GLOBAL
+------------------------------------------------- */
 body {
-    background-image: url('fondo1.jpg');
-    background-size: cover;
-    background-attachment: fixed; /* Efecto de paralaje */
-    background-position: center;
-    font-family: 'UnifrakturMaguntia', cursive;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  color: #eee;
 }
 
-header{
-    background: linear-gradient(90deg, #333, #ff4500);
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 3px solid #ff4500;
-    position: relative; /* Necesario para posicionar elementos dentro del header */
-}
-header img.esquina {
-    position: absolute;
-    top: 20px; /* Ajusta la distancia desde la parte superior */
-    left: 20px; /* Ajusta la distancia desde la izquierda */
-    width: 120px; /* Tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 5px; /* Bordes redondeados (opcional) */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para dar efecto */
-}
-header h1 {
-    color: #ff4500;
-    margin-left: 120px; /* Desplaza el texto hacia la derecha para evitar que se superponga con la imagen */
-}
-nav ul {
-    list-style: none;
-    padding: 0;
+h1, h2, h3 {
+  font-family: 'UnifrakturMaguntia', cursive;
+  color: #e50914;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-.nav-title {
-    font-family: 'UnifrakturMaguntia',cursive;
-}
-.titulo-sencillo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; /* Semi-negrita para resaltar un poco */
-    font-size: 2rem; /* Ajusta el tamaño según tu diseño */
-    text-align: center; /* Centrado para estética */
-    color: #ffffff; /* Blanco para que contraste bien con el fondo oscuro */
-    margin-bottom: 20px; /* Espaciado inferior */
-    text-transform: uppercase; /* Opcional: convierte el texto a mayúsculas */
-    letter-spacing: 1.5px; /* Opcional: mejora el espaciado entre letras */
-}
-.nav-item {
-    font-family: 'UnifrakturMaguntia',cursive;
-    font-size: 1.2rem; /* Ajusta el tamaño si es necesario */
-    letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
+/* ----------------------------------------------
+   HEADER
+------------------------------------------------- */
+.main-header {
+  background: linear-gradient(to right, #000, #1a1a1a);
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(255,0,0,0.1);
 }
 
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #222;
-    color: #777
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.fondo-contactos {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-  color: white;
+.logo {
+  height: 60px;
+  border-radius: 5px;
+}
+
+.brand {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+/* Navbar personalizado */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #e50914;
+}
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e50914;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+#mainMenu {
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ----------------------------------------------
+   BIOGRAFÍA CON ANIMACIÓN
+------------------------------------------------- */
+.bio-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hover-reveal {
+  position: relative;
+  cursor: pointer;
+}
+
+.bio-content {
+  max-width: 800px;
+  margin: 20px auto 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.hover-reveal:hover + .bio-content {
+  opacity: 1;
+  height: auto;
+  transform: translateY(0);
+}
+
+/* ----------------------------------------------
+   SLIDER
+------------------------------------------------- */
+.slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.carousel {
+  width: 100%;
+  max-width: 800px;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 200px;
+  }
+}
+.slider-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  margin-top: 20px;
+  background-image: url('fondo1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+/* Asegura que el contenido no se opaque con el fondo */
+.carousel {
+  position: relative;
+  z-index: 2;
+}
+
+/* ----------------------------------------------
+   SECCIÓN MÚSICA
+------------------------------------------------- */
+.music-section {
+  padding: 60px 20px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.audio-player audio {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+/* ----------------------------------------------
+   EVENTOS
+------------------------------------------------- */
+.eventos-section {
+  padding: 60px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.eventos-galeria img {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  border: 2px solid #e50914;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.eventos-galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------------------------------
+   FOOTER
+------------------------------------------------- */
+.footer {
+  background-color: #111;
+  color: #999;
+  text-align: center;
   padding: 20px;
-} /*fondo negro del footer*/
-nav ul li a {
-    color: #ffffff; /* Blanco como color inicial */
-    text-decoration: none; /* Sin subrayado */
-    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+  border-top: 2px solid #e50914;
 }
 
-nav ul li a:hover {
-    color: #ff0000; /* Rojo al pasar el cursor */
+.footer .social-icons a {
+  margin: 0 10px;
+  color: #999;
+  transition: color 0.3s;
 }
 
-p, h1, h2 {
-    color: #ffffff; /* Texto en blanco */
-    transition: color 0.3s ease; /* Transición suave */
+.footer .social-icons a:hover {
+  color: #e50914;
 }
-
-p:hover, h1:hover, h2:hover {
-    color: #ff0000; /* Cambia a rojo cuando el cursor pasa encima */
-}
-
-button {
-    background-color: #ff4500;
-    color: #fff;
-    border: none;
-    padding: 10 px 20px;
-    border-radius: 5 px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-p {
-    font-family: 'Monserrat', sans-serif;
-    color: #f5f5f5;
-}
-header {
-    background: linear-gradient(90deg, #2b2b2b, #7a0000);
-    color: #f5f5f5;
-}
-
-section {
-    color: #f5f5f5; /* Texto en color claro */
-    background: linear-gradient(200deg, rgba(5, 5, 5, 0.8), rgba(122, 0, 0, 0.8)); /* Degradado con opacidad */
-    border: 2px solid #7a0000; /* Bordes en rojo oscuro */
-    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
-    padding: 20px; /* Espaciado interno */
-    margin: 10px auto; /* Margen automático para centrar */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra para un efecto flotante */
-    text-align: center;
-}
-/* Estilos generales del texto en los contenedores */
-  section h2 {
-    transform: scale(1); /* Tamaño inicial */
-    transition: transform 0.3s ease, color 0.3s ease; /* Suaviza el efecto */
-}
-
-  section h2:hover {
-    transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
-    color: #ff4500; /* Cambia el color del texto para destacarlo */
-}
-
-
-#biografia {
-background: 2px solid #7a0000;
-border-radius: 10px;
-max-width: 1500px; /* Ancho máximo del contenedor */
-padding: 20px;
-margin: 10px auto;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
-text-align:center;
-overflow-wrap: break-word; /* Hace que las palabras largas se dividan automáticamente */
-line-height: 1.6; /* Mejora el espaciado entre líneas para mayor legibilidad */
-}
-
-
-#slider {
-    position: relative;
-    width: 80%; /* Ajusta el ancho según tus necesidades, 80% es un buen punto de partida */
-    max-width: 600px; /* Tamaño máximo para que no sea demasiado grande */
-    height: auto; /* Altura adaptable a las imágenes */
-    margin: 20px auto; /* Centra el slider */
-    overflow: hidden; /* Oculta el contenido fuera del área visible */
-    border-radius: 10px; /* Opcional: bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Sombra */
-}
-
-.slider-container {
-    display: flex;
-    width: 100%; /* Elimina el cálculo innecesario si las imágenes ya están ajustadas */
-    transition: transform 0.5s ease-in-out; /* Transición suave */
-}
-
-.slide {
-    width: 100%; /* Cada diapositiva ocupa el 100% del ancho del contenedor */
-    flex-shrink: 0;
-}
-
-.slide img {
-    width: 100%; /* Se ajusta al tamaño del contenedor */
-    height: auto; /* Mantiene la proporción original */
-    display: block; /* Elimina cualquier margen extra causado por los elementos inline */
-    object-fit: cover; /* Si quieres que la imagen se adapte al contenedor */
-}
-
-/* Estilos específicos para la página de tienda */
-#productos-tienda {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diseño en cuadrícula, flexible */
-    gap: 20px; /* Espaciado entre los productos */
-    justify-content: center; /* Centra las columnas horizontalmente */
-    padding: 20px;
-    text-align: center; /* Centra el contenido dentro de cada tarjeta */
-}
-
-/* Estilos para cada producto */
-.producto-tienda {
-    background: linear-gradient(180deg, #050505, #7a0000);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.producto-tienda:hover {
-    transform: scale(1.05); /* Efecto de acercamiento */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.8); /* Sombra más grande */
-}
-
-.producto-tienda img {
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    max-width: 250px; /* Tamaño máximo para evitar que crezca demasiado */
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.producto-tienda h3, .producto-tienda p {
-    color: #f5f5f5; /* Mantén el contraste con el fondo oscuro */
-}
-
-.producto-tienda button {
-    background-color: #ff4500;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.producto-tienda button:hover {
-    background-color: #f00808; /* Cambia el color al pasar el cursor */
-}
-
-/* Botón añadir al carrito */
-button.añadir-carrito {
-    background-color: #ff4500; /* Color base */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-transform: uppercase;
-    position: relative;
-    overflow: hidden; /* Oculta el efecto de brillo fuera del botón */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-button.añadir-carrito:hover {
-    background-color: #f53d00; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.1); /* Efecto de zoom */
-}
-
-/* Efecto de luz brillante */
-button.añadir-carrito::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-    transition: left 0.3s ease;
-}
-
-button.añadir-carrito:hover::before {
-    left: 100%; /* Hace que el brillo se mueva a través del botón */
-}
-
-button.añadir-carrito:active {
-    transform: scale(1); /* Vuelve a la escala normal al hacer clic */
-    background-color: #cc2f00; /* Color aún más oscuro al presionar */
-}
-/* Centrar el contenedor del carrito */
-#carrito {
-    display: flex;
-    flex-direction: column; /* Asegura una disposición vertical del contenido */
-    align-items: center; /* Centra horizontalmente los elementos internos */
-    justify-content: center; /* Centra verticalmente los elementos internos */
-    margin: 0 auto; /* Centra horizontalmente en el contenedor padre */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade un efecto elegante */
-    background-color: #220f0f; /* Fondo blanco para destacar */
-    border-radius: 10px; /* Esquinas redondeadas */
-}
-
-body {
-    justify-content: center; /* Centra horizontalmente el carrito */
-    align-items: center; /* Centra verticalmente el carrito */
-    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-    margin: 0; /* Elimina márgenes */
-}
-
-
-/* Contador del carrito */
-#carrito-flotante .contador {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: red;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-button.comprar {
-    background-color: #7a0000; /* Color rojo oscuro */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-transform: uppercase; /* Texto en mayúsculas */
-    position: relative;
-    overflow: hidden; /* Oculta el brillo fuera del botón */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto al pasar el mouse */
-button.comprar:hover {
-    background-color: #9a0000; /* Color ligeramente más claro */
-    transform: scale(1.1); /* Zoom al pasar el cursor */
-    box-shadow: 0px 8px 15px rgba(122, 0, 0, 0.5); /* Sombra llamativa */
-}
-
-/* Efecto de brillo que cruza el botón */
-button.comprar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%; /* Fuera del área inicial */
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-    transition: left 0.5s ease;
-}
-
-button.comprar:hover::before {
-    left: 100%; /* Movimiento de brillo cruzando el botón */
-}
-
-/* Efecto al hacer clic */
-button.comprar:active {
-    transform: scale(1); /* Sin zoom */
-    background-color: #5a0000; /* Color más oscuro */
-}
-/*ACA EMPEIZA EL CODIGO DEL CARRITO FLOTANTE*/
-#carrito-flotante {
-    z-index: 1050; /* Asegúrate de que esté por encima de otros elementos */
-}
-
-#carrito-flotante button:hover {
-    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
-    transition: transform 0.3s ease; /* Transición suave */
-}
-
-#carrito-flotante img {
-    pointer-events: none; /* Evita que el cursor afecte al icono */
-}
-/*ACA TERMINA EL CODIGO DE CARRTIO FLOTANTE*/
