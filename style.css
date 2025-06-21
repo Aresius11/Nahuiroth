@@ -223,3 +223,17 @@ h1, h2, h3 {
 .footer .social-icons a:hover {
   color: #e50914;
 }
+/*---------------------------------------------------
+ANIMACION DE ENTRADA
+----------------------------------------------------*/
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
