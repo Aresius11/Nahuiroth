@@ -108,14 +108,23 @@
 
     <!-- SECCIÓN MÚSICA -->
     <section id="Musica" class="music-section fade-in-up">
-      <h2 class="section-title">Escucha un adelanto de nuestro sencillo "Espectro"</h2>
-      <div class="audio-player">
-        <audio controls>
-          <source src="espectro.mp3" type="audio/mpeg">
-          Tu navegador no soporta este audio.
-        </audio>
-      </div>
-    </section>
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="espectro2.mp4" type="video/mp4">
+    Tu navegador no soporta el video en HTML5.
+  </video>
+
+  <!-- Contenido por encima del video -->
+  <div class="content-overlay">
+    <h2 class="section-title">Escucha un adelanto de nuestro sencillo "Espectro"</h2>
+    <div class="audio-player">
+      <audio controls>
+        <source src="espectro.mp3" type="audio/mpeg">
+        Tu navegador no soporta este audio.
+      </audio>
+    </div>
+  </div>
+</section>
 
     <!-- EVENTOS -->
     <section id="Eventos" class="eventos-section">
