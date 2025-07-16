@@ -209,7 +209,7 @@ h1, h2, h3 {
 ------------------------------------------------- */
 .eventos-section {
   padding: 60px 20px;
-  background: #000;
+  background: #000000;
   text-align: center;
 }
 
@@ -267,4 +267,37 @@ ANIMACION DE ENTRADA
 .fade-in-up.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ----------------------------------------------
+   SEPARADORES SVG CON TEXTURA
+------------------------------------------------- */
+.separador-svg {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  position: relative;
+}
+.separador-svg svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+  /* Fondo degradado gris metálico */
+  background: linear-gradient(90deg, #a49f9f 0%, #684d4d 100%);
+  border-radius: 0 0 30px 30px;
+}
+.separador-svg::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+  background-repeat: repeat;
+  background-size: 300px 100px;
+  mix-blend-mode: lighten;
+  animation: none;
 }
