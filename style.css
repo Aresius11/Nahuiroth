@@ -238,11 +238,19 @@ h1, h2, h3 {
 }
 
 .footer .social-icons a {
-  margin: 0 10px;
+  margin: 0 30px;
   color: #999;
   transition: color 0.3s;
 }
-
+.footer .social-icons a {
+  margin: 0 30px;
+  color: #999;
+  transition: color 0.3s;
+  font-size: 2.2rem; /* Aumenta el tamaño de los íconos */
+}
+.footer .social-icons a i {
+  font-size: 2.2rem; /* Si usas <i> para los íconos, aumenta su tamaño */
+}
 .footer .social-icons a:hover {
   color: #e50914;
 }
