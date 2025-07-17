@@ -1,303 +1,242 @@
-/* ----------------------------------------------
-   FUENTES Y CONFIGURACIÓN GLOBAL
-------------------------------------------------- */
+/* Fondo general oscuro con textura */
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #111;
-  color: #eee;
+  background: linear-gradient(135deg, #000 70%, #1a1a1a 100%);
+  color: #e0c68c; /* dorado */
+  font-family: 'Oswald', 'Arial Black', Arial, sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'UnifrakturMaguntia', cursive;
-  color: #e50914;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+/* Navbar estilo metal/prehispánico */
+.navbar {
+  background: linear-gradient(90deg, #6e0a0a 0%, #120101 100%);
+  border-bottom: 3px solid #b8860b; /* dorado */
+  box-shadow: 0 2px 8px #000a;
 }
 
-/* ----------------------------------------------
-   HEADER
-------------------------------------------------- */
-.main-header {
-  background: linear-gradient(to right, #000, #1a1a1a);
-  padding: 10px 20px;
-  box-shadow: 0 4px 8px rgba(255,0,0,0.1);
+/* Títulos de sección con efecto y color dorado/rojo */
+.titulo-seccion {
+  text-align: center;
+  color: #c00;
+  font-family: 'UnifrakturCook', 'Oswald', 'Arial Black', Arial, sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #000, 0 0 10px #c00, 0 0 8px #b8860b;
+  margin-bottom: 1.5rem;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* Botones del menú */
+.nav-link {
+  color: #e0c68c !important; /* dorado */
+  font-family: 'UnifrakturCook', 'Oswald', 'Arial Black', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #c00 !important; /* rojo */
+  text-shadow: 0 0 8px #b8860b88, 0 0 8px #aaa;
 }
 
-.logo {
-  height: 60px;
+/* Slider imágenes */
+.slider-img {
+  width: 50%;
+  height: auto;
+  border: 4px solid #b8860b; /* dorado */
+  box-shadow: 0 0 20px #000a, 0 0 8px #b8860b88, 0 0 12px #aaa;
+  background: linear-gradient(135deg, #222 60%, #c0c0c0 100%); /* plateado */
+}
+
+/* Footer con fondo oscuro y logos dorados/plateados */
+footer {
+  background: #6e0a0a;
+  color: #e0c68c;
+  border-top: 3px solid #b8860b;
+}
+footer a {
+  color: #b8860b !important; /* dorado */
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: #c0c0c0 !important; /* plateado */
+}
+
+/* Footer: iconos de redes sociales más grandes */
+footer .bi {
+  font-size: 2.5rem !important;
+}
+
+/* Biografía animada */
+.bio-content {
+  color: #fff;
+  font-family: 'Merriweather', serif;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s, max-height 0.5s;
+  background: rgba(110, 10, 10, 0.85); /* rojo oscuro translúcido */
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 10px #000a, 0 0 8px #c0c0c088;
+}
+#biografia:hover .bio-content {
+  opacity: 1;
+  max-height: 2000px;
+}
+
+/* Estilo oscuro para el reproductor de audio */
+.audio-dark-card {
+  background: rgba(0,0,0,0.15) !important;
+  color: #fff;
+  border: none !important;
+  box-shadow: none !important;
+}
+.audio-dark-card .card-title {
+  color: #ffc107;
+  font-family: 'UnifrakturCook', cursive;
+  letter-spacing: 1px;
+}
+.audio-dark-card .btn-success {
+  background-color: #212529;
+  border: 1px solid #ffc107;
+  color: #ffc107;
+}
+.audio-dark-card .btn-danger {
+  background-color: #212529;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+}
+.audio-dark-card input[type="range"] {
+  accent-color: #ffc107;
+  background: #232526;
   border-radius: 5px;
 }
+.audio-dark-card #audioTime {
+  color: #ffc107;
+  font-weight: bold;
+}
 
-.brand {
-  font-size: 2.5rem;
+/* Fondo oscuro para el reproductor de video */
+.video-dark-card {
+  background: rgba(0,0,0,0.15) !important;
   color: #fff;
+  border: none !important;
+  box-shadow: none !important;
+}
+.video-dark-card .card-title {
+  color: #ffc107;
+  font-family: 'UnifrakturCook', cursive;
+  letter-spacing: 1px;
 }
 
-/* Navbar personalizado */
-.navbar-dark .navbar-nav .nav-link {
-  color: #ccc;
-  transition: color 0.3s ease;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-  color: #e50914;
-}
-.navbar-dark .navbar-nav .nav-link {
+/* Fondo para la sección de fotos */
+#fotos {
+  background: url('tierra_fondo.jpeg') center center/cover no-repeat;
+  min-height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.4);
   position: relative;
-  overflow: hidden;
+}
+#fotos .carousel {
+  background: rgba(20,20,20,0.7);
+  border-radius: 16px;
+  padding: 24px 0;
 }
 
-.navbar-dark .navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #e50914;
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
+/* Ajuste de imágenes en la sección de eventos */
+#eventos .row {
+  align-items: center;
 }
-
-.navbar-dark .navbar-nav .nav-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-#mainMenu {
-  animation: slideDown 0.6s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* ----------------------------------------------
-   BIOGRAFÍA CON ANIMACIÓN
-------------------------------------------------- */
-.bio-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.hover-reveal {
-  position: relative;
-  cursor: pointer;
-}
-
-.bio-content {
-  max-width: 800px;
-  margin: 20px auto 0;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 0.5s ease;
-  height: 0;
-  overflow: hidden;
-}
-
-.hover-reveal:hover + .bio-content {
-  opacity: 1;
+#eventos img {
+  max-width: 30%;
   height: auto;
-  transform: translateY(0);
+  max-height: 25px;
+  object-fit: contain;
+  background: #222;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #c00; /* contorno rojo */
+  box-shadow: 0 0 12px #c0088;
+  animation: eventoZoom 2.5s infinite alternate ease-in-out;
 }
 
-/* ----------------------------------------------
-   SLIDER
-------------------------------------------------- */
-.slider-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  padding: 0 15px;
-}
-
-.carousel {
-  width: 100%;
-  max-width: 800px;
-}
-
-.carousel-item {
-  height: 500px;
-}
-
-.carousel-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  .carousel-item {
-    height: 200px;
+@keyframes eventoZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.07);
   }
 }
-.slider-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 15px;
-  margin-top: 20px;
-  background-image: url('fondo1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+/* Fondo individual para biografía y música */
+#biografia {
+  background: url('cielo_fondo1.jpeg') center center/cover no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 48px 0;
   position: relative;
   z-index: 1;
-  background-attachment: fixed;
 }
-
-/* Asegura que el contenido no se opaque con el fondo */
-.carousel {
+#musica {
+  background: url('cielo_fondo2.jpeg') center center/cover no-repeat;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 48px 0;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
-/* ----------------------------------------------
-   SECCIÓN MÚSICA
-------------------------------------------------- */
-.music-section {
-  padding: 150px 40px;
-  background-color: #1a1a1a;
-  text-align: center;
+/* Eliminar margen entre secciones para transición suave */
+#biografia + #musica {
+  margin-top: -48px;
 }
 
-.audio-player audio {
-  width: 100%;
-  max-width: 400px;
-  margin-top: 20px;
-}
-.music-section {
+/* Canvas para animación de relámpagos/fuego en eventos */
+#eventos {
   position: relative;
   overflow: hidden;
 }
-
-.background-video {
+#eventos-canvas {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.content-overlay {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  padding: 2em;
-}
-
-
-/* ----------------------------------------------
-   EVENTOS
-------------------------------------------------- */
-.eventos-section {
-  padding: 60px 20px;
-  background: #000000;
-  text-align: center;
-}
-
-.eventos-galeria img {
-  width: 100%;
-  max-width: 400px;
-  margin: 10px;
-  border: 2px solid #e50914;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.eventos-galeria img:hover {
-  transform: scale(1.05);
-}
-
-/* ----------------------------------------------
-   FOOTER
-------------------------------------------------- */
-.footer {
-  background-color: #111;
-  color: #999;
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid #e50914;
-}
-
-.footer .social-icons a {
-  margin: 0 30px;
-  color: #999;
-  transition: color 0.3s;
-}
-.footer .social-icons a {
-  margin: 0 30px;
-  color: #999;
-  transition: color 0.3s;
-  font-size: 2.2rem; /* Aumenta el tamaño de los íconos */
-}
-.footer .social-icons a i {
-  font-size: 2.2rem; /* Si usas <i> para los íconos, aumenta su tamaño */
-}
-.footer .social-icons a:hover {
-  color: #e50914;
-}
-/*---------------------------------------------------
-ANIMACION DE ENTRADA
-----------------------------------------------------*/
-
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.fade-in-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ----------------------------------------------
-   SEPARADORES SVG CON TEXTURA
-------------------------------------------------- */
-.separador-svg {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  position: relative;
-}
-.separador-svg svg {
-  display: block;
-  width: 100%;
-  height: 100px;
-  position: relative;
-  z-index: 1;
-  /* Fondo degradado gris metálico */
-  background: linear-gradient(90deg, #a49f9f 0%, #684d4d 100%);
-  border-radius: 0 0 30px 30px;
-}
-.separador-svg::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: 2;
   pointer-events: none;
-  opacity: 0.3;
-  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
-  background-repeat: repeat;
-  background-size: 300px 100px;
-  mix-blend-mode: lighten;
-  animation: none;
+  z-index: 0;
 }
+
+/* Canvas para animación de relámpagos en música */
+#musica {
+  position: relative;
+  overflow: hidden;
+}
+#musica-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Canvas para animación de relámpagos en biografía */
+#biografia {
+  position: relative;
+  overflow: hidden;
+}
+#biografia-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Puedes agregar una fuente prehispánica desde Google Fonts si lo deseas */
