@@ -147,7 +147,7 @@ footer .bi {
   align-items: center;
 }
 #eventos img {
-  max-width: 50%;
+  max-width: 40%;
   height: auto;
   max-height: 120px;
   object-fit: contain;
