@@ -113,38 +113,37 @@
   </div>
 </section>
 
-<section id="musica" class="my-5">
-  <h2 class="titulo-seccion">Música</h2>
-  <p>Escucha nuestras canciones y descubre nuestro estilo.</p>
-  <canvas id="musica-canvas"></canvas>
-  <div class="row justify-content-center">
-    <div class="col-md-6 mb-4">
-      <div class="card video-dark-card">
-        <div class="card-body text-center">
-          <h5 class="card-title">"ESPECTRO"</h5>
-          <video id="videoPlayer" width="100%" controls poster="portada_espectro.jpeg">
-            <source src="espectro5.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card audio-dark-card">
-        <div class="card-body text-center">
-          <h5 class="card-title">Escucha un avance de nuestro primer sencillo "ESPECTRO"</h5>
-          <audio id="audioPlayer" src="espectro.mp3"></audio>
-          <div class="d-flex justify-content-center align-items-center gap-2 mt-2">
-            <button id="playBtn" class="btn btn-success"><i class="bi bi-play-fill"></i></button>
-            <button id="pauseBtn" class="btn btn-danger"><i class="bi bi-pause-fill"></i></button>
-            <input type="range" id="audioSeek" value="0" min="0" max="100" style="width: 60%;">
-            <span id="audioTime" style="min-width: 60px;">0:00</span>
+<section id="musica" class="my-5 position-relative">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="espectro5.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+
+  <!-- Capa de contenido encima del video -->
+  <div class="content-overlay">
+    <h2 class="titulo-seccion">Música</h2>
+    <center><p>Escucha nuestras canciones y descubre nuestro estilo.</p></center>
+    <canvas id="musica-canvas"></canvas>
+    <div class="row justify-content-center">
+      <div class="col-md-6 mb-4">
+        <div class="card audio-dark-card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Escucha un avance de nuestro primer sencillo "ESPECTRO"</h5>
+            <audio id="audioPlayer" src="espectro.mp3"></audio>
+            <div class="d-flex justify-content-center align-items-center gap-2 mt-2">
+              <button id="playBtn" class="btn btn-success"><i class="bi bi-play-fill"></i></button>
+              <button id="pauseBtn" class="btn btn-danger"><i class="bi bi-pause-fill"></i></button>
+              <input type="range" id="audioSeek" value="0" min="0" max="100" style="width: 60%;">
+              <span id="audioTime" style="min-width: 60px;">0:00</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <section id="fotos" class="my-5">
   <h2 class="titulo-seccion">Fotos</h2>
