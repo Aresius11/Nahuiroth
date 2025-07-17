@@ -167,7 +167,7 @@ footer .bi {
   display: block;
   margin: 0 auto;
   border: 3px solid #c00;
-  box-shadow: 0 0 12px #c0088;
+  box-shadow: 0 0 12px #c00888;
   position: relative;
   z-index: 1;
   transition: transform 0.5s cubic-bezier(.17,.67,.83,.67), box-shadow 0.5s, border-color 0.5s, filter 0.5s;
@@ -185,6 +185,38 @@ footer .bi {
   60% { box-shadow: 0 0 80px 32px #fff, 0 0 40px 12px #ff0, 0 0 32px 8px #c00; filter: brightness(1.5); }
   100% { box-shadow: 0 0 64px 24px #fff8, 0 0 32px 8px #ff0a, 0 0 24px 4px #c00a; filter: brightness(1.35); }
 }
+
+#momentos {
+  background: linear-gradient(135deg, #111 40%, #212529 100%);
+  padding: 40px 0;
+  border-top: 3px solid #ffc107;
+}
+#momentos .carousel-item {
+  text-align: center;
+}
+.titulo-seccion {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 2.5rem;
+  color: #ffc107;
+  text-align: center;
+  animation: shine 4s ease-in-out infinite;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff3c00, 0 0 30px #ff3c00;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107;
+  }
+}
+
+
+
 
 /* Fondo individual para biografía y música */
 #biografia {
