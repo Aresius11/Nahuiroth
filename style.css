@@ -288,5 +288,27 @@ footer .bi {
   pointer-events: none;
   z-index: 0;
 }
+/*SECCION DEL PUZZLE*/
+ #puzzleContainer {
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+  }
 
+  #puzzleGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+    justify-content: center;
+  }
+
+  .puzzlePiece {
+    width: 100px;
+    height: 100px;
+    background-size: 300px 300px;
+    cursor: move;
+    border: 1px solid #ccc;
+  }
+/* TERMINA SECCION DE PUZZLE */
 /* Puedes agregar una fuente prehispánica desde Google Fonts si lo deseas */
